@@ -5,3 +5,5 @@ postgres/
 /generated/prisma
 
 /generated/prisma
+
+/src/generated/prisma
