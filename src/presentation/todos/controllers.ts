@@ -26,7 +26,9 @@ export class TodosController {
   public createTodo(req: Request, res: Response) {
     const { text } = req.body;
     if (!text) return res.status(400).json({ message: "Text is required" });
+
     const newTodo = { id: todos.length + 1, text, completedAt: new Date() };
+
     todos[todos.length] = newTodo;
 
     return res.json({ message: "Todo created", todo: newTodo });
