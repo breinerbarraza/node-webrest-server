@@ -1,6 +1,6 @@
 import express, { Router } from "express";
+import compression from "compression";
 import path from "path";
-import { envs } from "../config/envs";
 
 interface Options {
   port: number;
@@ -25,6 +25,7 @@ export class Server {
     //* Middlewares
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
+    this.app.use(compression());
 
     //* Routes
     this.app.use(this.routes);

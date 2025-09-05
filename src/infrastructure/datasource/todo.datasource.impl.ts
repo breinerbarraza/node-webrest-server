@@ -34,10 +34,9 @@ export class TodoDatasourceImpl implements TodoDatasource {
 
     const todo = await prisma.todo.update({
       where: { id: updateTodoDto.id },
-      data: {
-        text: updateTodoDto.values,
-      },
+      data: updateTodoDto.values,
     });
+
     return TodoEntity.fromObject(todo);
   }
 
