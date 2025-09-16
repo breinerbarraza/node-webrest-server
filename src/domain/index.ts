@@ -3,6 +3,8 @@ export * from "./dtos";
 export * from "./entities/todo.entity";
 export * from "./repositories/todo.repository";
 
+export * from "./errors/custom.error";
+
 // USE-CASES
 export * from "./use-cases/todo/create-todo";
 export * from "./use-cases/todo/delete-todo";
